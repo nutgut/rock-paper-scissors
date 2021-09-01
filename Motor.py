@@ -10,14 +10,9 @@ class Thing:
 
     # Method for creating rock, paper or scissors (randomly)
     def randoms(self):
-        digit = random.randint(0, 2)
-        if digit == 0:
-            self.__what = 'rock'
-        elif digit == 1:
-            self.__what = 'paper'
-        else:
-            self.__what = 'scissors'
-
+        choices = ['rock', 'paper', 'scissors']
+        self.__what = choices[random.randint(0, 2)]
+        
     # Method returning the value for __what variable
     def get_what(self):
         return self.__what
